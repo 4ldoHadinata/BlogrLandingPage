@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,300;0,600;1,300;1,600&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+// color variables
+
+// primary
+$light-red: hsl(356, 100%, 66%);
+$very-light-red: hsl(355, 100%, 74%);
+$very-dark-blue: hsl(208, 49%, 24%);
+
+// neutral
+$white: hsl(0, 0%, 100%);
+$grayish-blue: hsl(240, 2%, 79%);
+$very-dark-grayish-blue: hsl(207, 13%, 34%);
+$very-dark-black-blue: hsl(240, 10%, 16%);
+
+// background gradient - Intro/CTA mobile nav:
+$gradient-very-light-red: hsl(13, 100%, 72%);
+$gradient-light-red: hsl(353, 100%, 62%);
+
+// background gradient - body:
+$gradient-very-dark-gray-blue: hsl(237, 17%, 21%);
+$gradient-very-dark-desaturated-blue: hsl(237, 23%, 32%);
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Overpass', 'Ubuntu', sans-serif;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+header {
+    background-image: url("./images/bg-pattern-intro.svg"), linear-gradient($gradient-very-light-red, $gradient-light-red);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2.1em;
+    color: $white;
+    border-bottom-left-radius: 5rem;
+}
+
+.navbar {
+    padding: 1.5em 0 1em 0;
+    position: relative;
+
+    .menu-icon {
+        float: right;
+        padding: 11px 0;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: $white;
+        border-radius: 10px;
+        padding: 1em;
+        width: 100%;
+        text-align: center;
+
+        a {
+            font-weight: bold;
+            color: $very-dark-blue;
+            text-decoration: none;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            display: block;
+        }
+
+        .signup {
+            background: linear-gradient($gradient-very-light-red, $gradient-light-red);
+            padding: 0.7em 1em;
+            border-radius: 2.5em;
+            color: $white;
+        }
+    }
+
+    .menu div>li {
+        margin: 1em 0;
+    }
+
+    .menu div>li:hover img, .menu div>li:focus img {
+        transform: rotate(180deg);
+    }
+
+    .menu div>li:hover .sub-menu, .menu div>li:focus .sub-menu {
+        display: block;
+    }
+
+    .sub-menu {
+        display: none;
+        background-color: $grayish-blue;
+        margin: 0.5em 0.5em;
+        padding: 0.5em 0;
+        border-radius: 5px;
+
+        ul li {
+            margin: 0.5em 0;
+        }
+
+        ul li a:hover {
+            color: $white;
+        }
+    }
+
+    .menu-main {
+        border-bottom: 1px solid $grayish-blue
+    }
+}
+
+.hero {
+    text-align: center;
+    padding: 3.5em 0.5em;
+
+    h1, p {
+        margin: 0.5em 0;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        font-family: 'Ubuntu';
+        font-weight: bold;
+        margin: 2.5em 0;
+
+        &-start, &-learn {
+            padding: 0.8em 1em;
+            background-color: hsl(0, 0%, 100%);
+            border-radius: 2.5em;
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        &-start {
+            a {
+                color: hsl(356, 100%, 66%);
+            }
+        }
+
+        &-learn {
+            background-color: transparent;
+            border: 1px solid $white;
+
+            a {
+                color: $white;
+            }
+        }
+    }
+}
+
+.section-editor {
+    text-align: center;
+    margin: 5em 0 15em 0;
+
+    h1 {
+        margin-bottom: 2em;
+    }
+
+    .left {
+        margin: 2.5em;
+
+        h2 {
+            margin: 0 1em;
+        }
+
+        p{
+            margin: 1em 0 2em 0;
+        }
+    }
+
+}
+
+.section-mobile {
+    text-align: center;
+    background: url('./images/bg-pattern-circles.svg'), linear-gradient($gradient-very-dark-gray-blue, $gradient-very-dark-desaturated-blue);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding-bottom: 2em;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 60px;
+    color: $white;
+
+    img {
+        margin-top: -11em;
+    }
+
+    .right {
+        padding: 0 2em;
+        margin-bottom: 4em;
+    }
+}
+
+.section-laptop {
+    text-align: center;
+    padding: 3em 0;
+
+    .right {
+        padding: 0 2.5em;
+    }
+}
+
+footer {
+    color: $white;
+    background-color: $very-dark-black-blue;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2em 0;
+    border-top-right-radius: 70px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    a {
+        color: $white;
+        margin-bottom: 1em;
+        text-decoration: none;
+    }
+}
