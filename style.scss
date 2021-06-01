@@ -233,3 +233,160 @@ footer {
         text-decoration: none;
     }
 }
+
+@media (min-width: 750px) {
+    .navbar {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+    .section-editor {
+        padding-left: 2em;
+        padding-right: 0;
+
+        h1 {
+            margin-bottom: 0;
+        }
+
+        .content-editor {
+            display: flex;
+            text-align: left;
+            flex-direction: row-reverse;
+            align-items: center;
+            margin-top: -1em;
+            margin-bottom: 0;
+
+            div {
+                flex-basis: 0;
+                flex-grow: 1;
+            }
+
+            h2 {
+                margin-left: 0;
+            }
+
+            img {
+                content: url(./images/illustration-editor-desktop.svg);
+            }
+        }
+    }
+
+    .section-mobile {
+        display: flex;
+        text-align: left;
+        align-items: center;
+        margin-top: -12em;
+        background-position: right;
+        background-size: 200%;
+        padding-right: 2em;
+        padding-left: 2em;
+        padding-bottom: 0;
+        padding-top: 0;
+
+        div {
+            flex-basis: 0;
+            flex-grow: 1;
+        }
+
+        img {
+            margin: 0;
+        }
+
+        .left {
+            flex-grow: 0.75;
+        }
+    }
+
+    .section-laptop {
+        display: flex;
+        padding-right: 2em;
+        padding-left: 2em;
+        text-align: left;
+        align-items: center;
+
+        div {
+            flex-basis: 0;
+            flex-grow: 1;
+        }
+
+        img {
+            content: url('./images/illustration-laptop-desktop.svg');
+        }
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+    }
+}
+
+@media (min-width: 861px) {
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3em;
+
+        .menu {
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            background: none;
+            justify-content: space-between;
+
+            img {
+                content: url('./images/icon-arrow-light.svg');
+            }
+
+            a {
+                color: $white;
+
+                &:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+
+            &-icon {
+                display: none;
+            }
+
+            &-main {
+                border-bottom: none;
+            }
+
+            &-main, &-secondary {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 2em;
+            }
+
+            .sub-menu {
+                position: absolute;
+                background: $white;
+                text-align: left;
+                padding: 1em 3em 1em 1em;
+                margin: 0;
+
+                a {
+                    color: $very-dark-black-blue;
+                    font-weight: normal;
+
+                    &:hover {
+                        font-weight: bold;
+                        color: $very-dark-black-blue;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .signup {
+                background: $white;
+                color: $light-red;
+                padding: 1em 2.5em;
+            }
+        }
+    }
+}
